@@ -1,0 +1,26 @@
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: ["E2E"]
+    types: [completed]
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    if: ${{ github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main') }}
+
+    runs-on: ubuntu-latest
+
+    env:
+      RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+
+    steps:
+      - name: Verificar configuración de Render
+        if: ${{ env.RENDER_DEPLOY_HOOK_URL == '' }}
+        run: echo "Render todavía no está configurado. Deployment omitido."
+
+      - name: Publicar en Render
+        if: ${{ env.RENDER_DEPLOY_HOOK_URL != '' }}
+        run: curl -fsS -X POST "$RENDER_DEPLOY_HOOK_URL"
