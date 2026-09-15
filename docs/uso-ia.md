@@ -1,21 +1,77 @@
-# Registro de uso de IA
+# Registro de uso de inteligencia artificial
 
-Durante el proyecto utilicé un asistente de IA como apoyo para revisar requisitos, generar una primera base de código, detectar errores y preparar pruebas. La IA no se utilizó para reemplazar la ejecución o verificación del proyecto, además fue utilizada con supervización de la misma
+Durante el desarrollo de Plushie Panic se utilizó un asistente de inteligencia artificial como herramienta de apoyo.
+
+Se utilizó principalmente para generar una primera base del proyecto, encontrar errores, preparar pruebas y apoyar algunos recursos visuales.
+
+Las respuestas generadas no se utilizaron directamente sin revisión. El proyecto fue ejecutado y probado durante el desarrollo, y varias propuestas iniciales fueron modificadas o descartadas.
 
 ## Código y estructura
 
-Se pidió apoyo para:
+Se utilizó IA como apoyo para proponer o revisar partes como:
 
-- separar frontend React y backend Express;
-- definir los tipos principales de la partida;
-- implementar una primera versión del movimiento y validaciones;
-- configurar Playwright;
-- revisar errores de TypeScript y dependencias.
+- separación del frontend en React y el backend en Express;
+- tipos principales de TypeScript;
+- validaciones del backend;
+- configuración de Playwright;
+- configuración de GitHub Actions;
 
-Después de generar la base, el proyecto se ejecutó localmente y se fueron corrigiendo problemas concretos. Entre ellos estuvieron un conflicto de versiones de Vite y un error de TypeScript relacionado con una partida posiblemente nula
+Después de generar una primera base, el proyecto fue ejecutado localmente y se fueron corrigiendo los problemas encontrados.
+
+## Errores revisados con apoyo de IA
+
+Durante el desarrollo aparecieron algunos errores
+
+### Conflicto de dependencias
+
+En una de las primeras versiones existía un conflicto entre las versiones de:
+
+```text
+Vite
+@vitejs/plugin-react
+```
+
+Esto impedía completar correctamente la instalación de dependencias.
+
+Se revisaron las versiones y se ajustaron para utilizar una combinación compatible.
+
+### Error de TypeScript
+
+También apareció el error:
+
+```text
+'partida' is possibly 'null'
+```
+
+El problema estaba relacionado con el uso de la partida dentro del evento del teclado.
+
+Se solucionó guardando primero el identificador de la partida:
+
+```ts
+const partidaId = partida.id;
+```
+
+y utilizando ese valor al enviar los movimientos.
 
 ## Recursos visuales
 
-Los personajes **Little Aliens Forever** no fueron creados por IA para este proyecto. Son personajes que ya existían y se tomaron como referencia. Para usarlos en el juego se trabajó sobre la imagen de referencia: se borró el fondo para solo tenner el png
+Los personajes de **Little Aliens Forever** no fueron creados mediante inteligencia artificial para este proyecto.
 
-La IA sí se utilizó como apoyo para proponer y generar parte de los gráficos propios del proyecto, principalmente peluches, elementos del escenario y ajustes visuales
+Son personajes que ya existían previamente y se tomó como referencia el contenido de: @lilalienz4ever
+
+La inteligencia artificial sí fue utilizada como apoyo para proponer y generar algunos elementos propios del proyecto, principalmente:
+
+- peluches;
+- elementos de la juguetería;
+- recursos decorativos;
+- algunos ajustes visuales.
+
+Después estos elementos fueron revisados y modificados para mantener una apariencia similar dentro del juego.
+
+## Documentación
+
+La IA también se utilizó como apoyo para organizar los archivos Markdown y revisar qué información debía incluirse según los requisitos del examen.
+
+Después se modificó el contenido para que describiera el funcionamiento real del proyecto y los cambios que se realizaron durante el desarrollo.
+
+La inteligencia artificial se utilizó como herramienta de apoyo durante el proceso, pero el proyecto fue revisado, probado y ajustado después de cada cambio para mantener una lógica entendible
