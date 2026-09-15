@@ -282,3 +282,9 @@ La carpeta `docs/` contiene información adicional sobre:
 - decisiones de diseño;
 - investigación técnica;
 - uso de inteligencia artificial.
+
+## Demostración del juego
+
+La demostración del juego se encuentra disponible en el siguiente enlace:
+
+[Google Drive - Demostración de Little Aliens Forever: Plushie Panic](https://drive.google.com/drive/folders/1_wO4CXGvRHwN7gKBZi4PKf7ipgV6mAAa)
