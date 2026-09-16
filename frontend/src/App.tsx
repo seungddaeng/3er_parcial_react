@@ -100,7 +100,7 @@ function App() {
 
         <div className="titulo-hud">
           <span>LITTLE ALIENS FOREVER</span>
-          <strong>PLUSHIE PANIC</strong>
+          <strong>PLUSHIE PÁNICO</strong>
           <small>
             {partida.movimientos} / {partida.movimientosMaximos} MOVES
           </small>

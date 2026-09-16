@@ -9,7 +9,7 @@ export default function PantallaResultado({ partida, volver }: { partida: Partid
   return (
     <div className="resultado-fondo">
       <div className="resultado-card">
-        <p className="resultado-mini">PLUSHIE PANIC</p>
+        <p className="resultado-mini">PLUSHIE PÁNICO</p>
         {ganador ? (
           <>
             <img className="resultado-alien" src={imagenPersonaje(ganador.personaje)} alt={ganador.nombre} />
