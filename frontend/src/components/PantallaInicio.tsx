@@ -62,7 +62,7 @@ export default function PantallaInicio({
       <div className="inicio-estrellas estrellas-dos" />
       <header className="portada">
         <p className="mini-titulo">LITTLE ALIENS FOREVER</p>
-        <h1>PLUSHIE PANIC</h1>
+        <h1>PLUSHIE PÁNICO</h1>
         <p className="subtitulo">Encuentra pares, corre a tu caja y no dejes que el otro alien te los quite.</p>
       </header>
 
